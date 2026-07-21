@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Для самой любимой ❤️</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+background:linear-gradient(135deg,#ff8db6,#ffc8dd);
+overflow-x:hidden;
+color:white;
+}
+
+.hero{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+}
+
+h1{
+font-size:58px;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:22px;
+max-width:700px;
+line-height:1.7;
+}
+
+button{
+margin-top:40px;
+padding:18px 35px;
+font-size:20px;
+border:none;
+border-radius:50px;
+background:white;
+color:#ff4d88;
+cursor:pointer;
+transition:.3s;
+}
+
+button:hover{
+transform:scale(1.08);
+}
+
+section{
+padding:80px 20px;
+text-align:center;
+}
+
+.section-title{
+font-size:40px;
+margin-bottom:40px;
+}
+
+.cards{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+}
+
+.card{
+background:rgba(255,255,255,.2);
+backdrop-filter:blur(10px);
+padding:25px;
+border-radius:20px;
+width:250px;
+font-size:18px;
+line-height:1.6;
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.gallery img{
+width:100%;
+height:300px;
+object-fit:cover;
+border-radius:20px;
+}
+
+footer{
+padding:80px 20px;
+text-align:center;
+font-size:24px;
+}
+
+#message{
+display:none;
+margin-top:30px;
+font-size:30px;
+animation:fade 1s;
+}
+
+@keyframes fade{
+from{
+opacity:0;
+transform:translateY(30px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+.heart{
+position:fixed;
+top:-20px;
+pointer-events:none;
+animation:fall linear forwards;
+}
+
+@keyframes fall{
+to{
+transform:translateY(110vh);
+opacity:0;
+}
+}
+
+</style>
+
+</head>
+<body>
+
+<div class="hero">
+
+<h1>Для тебя, малыш❤️</h1>
+
+<p>
+
+Любимая, если ты открыла этот сайт,
+значит я захотел тебе подарить не просто
+подарок, а маленькое место, в котором живут мои чувства❤️
+
+<br><br>
+
+Спасибо тебе за каждую улыбку,
+каждый разговор и каждый момент❤️
+</p>
+
+<button onclick="showLove()">
+Нажми сюда❤️
+</button>
+
+<div id="message">
+Ты - самое лучшее, что случилось в моей жизни!❤️
+</div>
+
+</div>
+
+<section>
+
+<h2 class="section-title">
+Почему я тебя люблю❤️
+</h2>
+
+<div class="cards">
+
+<div class="card">
+💖–<br><br>
+Ты делаешь мою жизнь счастливее каждый день❤️
+</div>
+
+<div class="card">
+🌸<br><br>
+Твоя улыбка мне очень нравится❤️
+</div>
+
+<div class="card">
+✨<br><br>
+С тобой тепло и спокойно❤️
+</div>
+
+<div class="card">
+❤️<br><br>
+Самая красивая на свете❤️
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="section-title">
+Наши моменты
+</h2>
+
+<div class="gallery">
+
+<img src="7.jpg" alt="">
+<img src="2.jpg" alt="">
+<img src="3.jpg" alt="">
+<img src="4.jpg" alt="">
+<img src="5.jpg" alt="">
+<img src="6.jpg" alt="">
+<img src="1.jpg" alt="">
+<img src="8.jpg" alt="">
+<img src="9.jpg" alt="">
+<img src="10.jpg" alt="">
+<img src="11.jpg" alt="">
+
+</div>
+
+<p style="margin-top:25px;font-size:18px;">
+Это мы кстати)))❤️
+</p>
+
+</section>
+
+<section>
+
+<h2 class="section-title">
+Наши мечты❤️
+</h2>
+
+<div class="cards">
+
+<div class="card">
+✈️<br><br>
+Путешествовать вместе❤️ 
+</div>
+
+<div class="card">
+🌅<br><br>
+Встречать вдвоем закаты❤️
+</div>
+
+<div class="card">
+🏡<br><br>
+Создать уютный дом❤️
+</div>
+
+<div class="card">
+💍<br><br>
+Создать тысячи крутых воспоминаний❤️
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+Люблю тебя сегодня, завтра и всегда!❤️
+
+<br><br>
+
+Спасибо, что ты есть у меня❤️
+
+
+</footer>
+
+<audio id="loveMusic" loop>
+<source src="musik.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+
+let played = false;
+
+function showLove(){
+
+document.getElementById("message").style.display="block";
+
+if(!played){
+document.getElementById("loveMusic").play();
+played = true;
+}
+
+for(let i=0;i<45;i++){
+
+let heart=document.createElement("div");
+
+heart.className="heart";
+
+heart.innerHTML="❤️";
+
+heart.style.left=Math.random()*100+"vw";
+
+heart.style.fontSize=(15+Math.random()*35)+"px";
+
+heart.style.animationDuration=(3+Math.random()*4)+"s";
+
+document.body.appendChild(heart);
+
+setTimeout(()=>{
+heart.remove();
+},7000);
+
+}
+
+}
+
+</script>
+
+</body>
+</html>
